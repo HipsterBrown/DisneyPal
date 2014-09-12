@@ -1,0 +1,39 @@
+{
+    "appKeys": {
+        "KEY_OPEN": 1,
+        "KEY_PARK": 0,
+        "KEY_UNTIL": 2
+    },
+    "capabilities": [
+        "location"
+    ],
+    "companyName": "Hipsterbrown Creative",
+    "longName": "Disney Hours",
+    "projectType": "native",
+    "resources": {
+        "media": [
+            {
+                "file": "fonts/ufonts.com_din-light.ttf",
+                "name": "DIN_LIGHT_18",
+                "type": "font"
+            },
+            {
+                "file": "fonts/ufonts.com_din-light.ttf",
+                "name": "DIN_LIGHT_24",
+                "type": "font"
+            },
+            {
+                "file": "fonts/ufonts.com_din-bold.ttf",
+                "name": "DIN_BOLD_48",
+                "type": "font"
+            }
+        ]
+    },
+    "shortName": "Disney Hours",
+    "uuid": "23ee2b71-ed81-4eec-bcfa-b6e7e01e1e2c",
+    "versionCode": 1,
+    "versionLabel": "0.2",
+    "watchapp": {
+        "watchface": true
+    }
+}
