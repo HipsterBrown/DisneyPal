@@ -8,10 +8,16 @@
         "location"
     ],
     "companyName": "Hipsterbrown Creative",
-    "longName": "Disney Hours",
+    "longName": "Disney Pal - The Disney Vacation Companion",
     "projectType": "native",
     "resources": {
         "media": [
+            {
+                "file": "images/icon-light.png",
+                "menuIcon": true,
+                "name": "ICON_LIGHT",
+                "type": "png"
+            },
             {
                 "file": "fonts/ufonts.com_din-light.ttf",
                 "name": "DIN_LIGHT_18",
@@ -29,7 +35,7 @@
             }
         ]
     },
-    "shortName": "Disney Hours",
+    "shortName": "Disney Pal",
     "uuid": "23ee2b71-ed81-4eec-bcfa-b6e7e01e1e2c",
     "versionCode": 1,
     "versionLabel": "0.2",

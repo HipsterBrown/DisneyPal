@@ -132,7 +132,11 @@ static void inbox_received_callback(DictionaryIterator *iterator, void *context)
         snprintf(open_buffer, sizeof(open_buffer), "OPEN: %sam", t->value->cstring);
         break;
       case KEY_UNTIL:
-        snprintf(until_buffer, sizeof(until_buffer), "UNTIL: %spm", t->value->cstring);
+          if( strcmp(t->value->cstring, "12") == 0 ) {
+            snprintf(until_buffer, sizeof(until_buffer), "UNTIL: %sam", t->value->cstring);
+          } else {
+            snprintf(until_buffer, sizeof(until_buffer), "UNTIL: %spm", t->value->cstring);
+          }
         break;
       default:
         APP_LOG(APP_LOG_LEVEL_ERROR, "Key %d not recognized.", (int)t->key);
