@@ -105,6 +105,8 @@ function getHours(pos) {
         until = until.slice(0, until.indexOf(':'));
     console.log(park + ' will be open until: ' + until);
     
+    localStorage.setItem('times', resText);
+    
     var dict = {
       "KEY_PARK": park,
       "KEY_OPEN": open,
@@ -113,7 +115,9 @@ function getHours(pos) {
     
     Pebble.sendAppMessage(dict, 
       function(e) {
-        console.log("Hours info sent correctly.");
+        var timesJSON = localStorage.getItem('times');
+        console.log("Hours info sent correctly. Backup: " + timesJSON);
+        Pebble.showSimpleNotificationOnPebble('Heads Up', 'Fresh hours coming in.');
       },
       function(e) {
         console.log("Error sending the hours info, try again.");
@@ -139,7 +143,8 @@ function getLocation() {
 Pebble.addEventListener('ready',
   function(e) {
     console.log('PebbleKit JS is ready!');
-    
+    console.log('My dev env: ' + navigator.appName + ' || ' + navigator.userAgent);
+    console.log('Online Status: ' + navigator.onLine);
     getLocation();
     
   }
